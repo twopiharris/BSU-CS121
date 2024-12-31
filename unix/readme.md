@@ -47,8 +47,10 @@
 
 ## chmod
  * change permissions of a file
+```   
     owner  group  world
     rwx    rwx    rwx
+```
  * chmod 644 myfile
  * owner can read and write, everyone else can only read
  * chmod 755 myfile
