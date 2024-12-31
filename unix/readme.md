@@ -116,6 +116,7 @@
 
 ## other useful instructions
  * :set number - turns on line numbers
+ * :5 - go directly to line 5
  * :set autoindent - turns on autoindent
  * :set expandtab - converts tabs to spaces - very useful in python
  * :set tabstop=4 - sets tabs to four spaces long
