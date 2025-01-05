@@ -21,7 +21,7 @@ int main(){
     } else if (guess > correct){
       printf("too large! \n");
     } else {
-      printf("perfect!");
+      printf("perfect! \n");
     } // end if
   } // end while
   printf("It took %d tries...\n", tries);
