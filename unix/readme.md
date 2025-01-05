@@ -69,9 +69,9 @@
  * much more powerful editor
  * anachronistic - very unusual control system
  * three primary modes
- ** command - every key is a command
- ** insert - type stuff in like normal
- ** instructions - global commands
+   * *command* - every key is a command
+   * *insert* - type stuff in like normal
+   * *instructions* - global commands
  * lots of other modes too, but these are most important
  * you can link commands together to do very powerful things
  * you don't need to know how it all works.
