@@ -69,7 +69,7 @@ TO DO:
 ## html
 
 if you know how to write HTML, you can simply embed html tags
-<button type = button onclick = alert("Hi there")>click Me</button>
+<button type = "button" onclick = alert("Hi there")>click Me</button>
 <a href = "https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">official markdown docs</a> at github.com
 
 
