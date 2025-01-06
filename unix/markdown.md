@@ -21,7 +21,7 @@ a heading level
 
 ## emphasis
 
-*italic*
+*italic*  
 **bold**
 
 ## code formatting
@@ -63,7 +63,7 @@ int main(){
 ## task list
 TO DO:
 
-[x] learn basic unix
+[x] learn basic unix  
 [ ] take over the world
 
 ## html
