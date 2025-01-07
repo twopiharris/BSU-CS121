@@ -7,6 +7,7 @@ public class Hello {
     System.out.print("What is your name? ");
     String userName = input.nextLine();
     System.out.println("Hi " + userName + " from Java");
+    System.out.println("Wheeeeeee!");
   } // end main
 
 } // end class def
