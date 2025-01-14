@@ -19,8 +19,8 @@ int main(){
 
   //you can determine width of floats
   //but decimal output makes no sense
-  printf ("%f %4.2f %d \n", pi, pi, pi);
-/*
+  //printf ("%f %4.2f %d \n", pi, pi, pi);
+  
   //print a single character with the "%c" modifier
   printf ("%c \n", letter);
   //print an entire string with "%s"
@@ -54,5 +54,6 @@ int main(){
 
   printf ("%s\n", otherThing);
   return(0);
+/*
 */
-} // end main3
+} // end main
