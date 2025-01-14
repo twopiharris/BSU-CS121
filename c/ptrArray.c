@@ -15,7 +15,8 @@ int main(){
   for (i = 0; i < SIZE; i++){
     printf("%d) %d \n", i, score[i]);
   } // end for
-  
+ 
+
   //alternate way to define and fill array
   int par[SIZE];
   par[0] = 2;
@@ -25,6 +26,7 @@ int main(){
   for (i = 0; i < SIZE; i++){
     printf("%d (%d): %d \n", i, par[i], score[i]);
   } // end for
+
 
   //array is actually a pointer to the first element!
   printf("score for 0: %d\n", *score);
@@ -37,11 +39,13 @@ int main(){
   //be careful with order of operations!!
   printf("NOT score for 1: %d\n", *score + 1);
 
-/*
+
   //What if you try to print something that
   //isn't really part of the array?
   printf("Garbage: %d \n", *(score + 5));
-*/
+/*
+
+  */
   return(0);
 } // end main
 

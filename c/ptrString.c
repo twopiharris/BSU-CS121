@@ -11,15 +11,17 @@ int main(){
     char fName[20] = "Andy";
     printf ("Hi there %s! \n", fName);
 
+/*
     //the next two lines are equivalent
     printf ("fName[3]: %c \n", fName[3]);
     printf ("fName[3]: %c \n", *(fName + 3));
-
+    printf ("NOT fName[3]: %c \n", *fName + 3);
 
     //you can assign an entire string to a character pointer
     char * lName = "Harris";
     printf("Hi, %s %s! \n", fName, lName);
 
+    
     //input expects a character POINTER type
     //but a char array is already this type
     //You need to specify the length
@@ -27,6 +29,7 @@ int main(){
     printf("Seriously, what's your name? ");
     scanf("%s", realName);
     printf("Hi, %s! \n", realName);
+
 
     //string length is fixed
     //'dynamic' strings are fixed by initial assignment
@@ -37,13 +40,14 @@ int main(){
 
     printf ("%s \n", shortName);
 
+
     //if you want to manipulate strings, you must use
     //functions like strcpy
     strcpy(fName, "George");
     printf ("%s \n", fName);
 
     //copying a string does NOT do what you expect!
-    //fName = lName;
+    fName = lName;
 
     //printf("%s %s", fName, lName);
 
@@ -83,6 +87,5 @@ int main(){
 
     //rest of string is in memory but not displayed
     printf ("%c \n", realName[5]);
-
-
+*/
 } // end main
