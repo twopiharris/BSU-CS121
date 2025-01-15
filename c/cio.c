@@ -8,7 +8,7 @@
 int main(){
   //start with some standard data types
 
-  int integer = 42;
+  int integer;
   int foobar = 31;
   float pi = 3.1415927;
   char letter = 'a';
@@ -17,9 +17,11 @@ int main(){
   //integers can be output as decimal, hex (%x), or octal(%o)
   printf ("%d %x %o \n", integer, integer, integer);
 
+
   //you can determine width of floats
   //but decimal output makes no sense
-  //printf ("%f %4.2f %d \n", pi, pi, pi);
+  //  printf ("%f %4.2f %d \n", pi, pi, pi);
+  printf ("%f %4.2f \n", pi, pi);
   
   //print a single character with the "%c" modifier
   printf ("%c \n", letter);
@@ -54,6 +56,6 @@ int main(){
 
   printf ("%s\n", otherThing);
   return(0);
-/*
+/*  
 */
 } // end main
