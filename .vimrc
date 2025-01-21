@@ -4,6 +4,7 @@ set number
 set autoindent
 set tabstop=2 
 set expandtab
+colorscheme slate
 
 
 " quick compiling and running
