@@ -1,10 +1,11 @@
 " a few of my fovorite changes for programming
 
+set background=dark
 set number
 set autoindent
 set tabstop=2 
 set expandtab
-
+colorscheme slate
 
 " quick compiling and running
 "c
