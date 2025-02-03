@@ -27,7 +27,7 @@ class Critter {
 
 };
 
-main(){
+int main(){
 /* expected output:
    Anonymous
    Hi, my name is Anonymous
