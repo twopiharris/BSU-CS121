@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1285696822 source:/home/andy/Documents/csci/240/inheritance/CopyCritter.cpp
+	"Critter.h"
+	"CopyCritter.h"
+
+1285696799 /home/andy/Documents/csci/240/inheritance/Critter.h
+	<string>
+
+1285696866 /home/andy/Documents/csci/240/inheritance/CopyCritter.h
+	"Critter.h"
+
+1285693171 source:/home/andy/Documents/csci/240/inheritance/Critter.cpp
+	<string>
+	<iostream>
+	"Critter.h"
+
+1285696906 source:/home/andy/Documents/csci/240/inheritance/main.cpp
+	<iostream>
+	"Critter.h"
+

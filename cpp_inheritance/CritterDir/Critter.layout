@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="../CopyCritter.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="65" topLine="0" />
+	</File>
+	<File name="../CopyCritter.h" open="1" top="0" tabpos="3">
+		<Cursor position="106" topLine="0" />
+	</File>
+	<File name="../Critter.cpp" open="1" top="1" tabpos="2">
+		<Cursor position="355" topLine="0" />
+	</File>
+	<File name="../Critter.h" open="1" top="0" tabpos="4">
+		<Cursor position="0" topLine="6" />
+	</File>
+</CodeBlocks_layout_file>
