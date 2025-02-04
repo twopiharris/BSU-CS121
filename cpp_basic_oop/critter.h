@@ -13,4 +13,5 @@ class Critter {
     std::string getName();
 }; // end class def
 
+
 #endif
