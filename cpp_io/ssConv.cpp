@@ -20,7 +20,7 @@ int main(){
     converter.str("");
 
     //pass this line into stringstream
-    converter << currentLine;
+    converter.str(currentLine);
     
     //send stuff back to variables;
     //type conversion is automatic if possible!
