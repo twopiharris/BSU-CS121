@@ -59,6 +59,7 @@ void Bus::printTotal(){
   //prints out the total (static)
   //number of passengers
   std::cout << "Total Passengers: " << totalPass << std::endl;
+  //std::cout << "passengers on THIS bus: " << passengers << std::endl;
 }
 
 //static variables must be declared in global scope!
