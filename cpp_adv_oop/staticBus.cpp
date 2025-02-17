@@ -3,8 +3,6 @@
 #include <iostream>
 #include <string>
 
-//using namespace std;
-
 class Bus {
   private:
     std::string name;
