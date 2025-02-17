@@ -65,6 +65,8 @@ void Bus::printTotal(){
 int Bus::totalPass = 0;
 
 int main(){
+  std::cout << "at beginning of day: ";
+  Bus::printTotal();
   Bus b1("Magic bus");
   b1.board(5);
   b1.board(3);
