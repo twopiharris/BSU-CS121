@@ -1,0 +1,59 @@
+/* multiButtons.java 
+ * illustrate listening to multiple buttons 
+ */
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+class MultiButton extends JFrame implements ActionListener(){
+  
+  JLabel lblOutput = new JLabel("Please Click a button");
+  JButton btnOne = new JButton("one");
+  JButton btnTwo = new JButton("two");
+  JButton btnThree = new JButton("three");
+  JButton btnFour = new JButton("four");
+  
+  public static void main(String[] args){
+    new MultiButton();
+  } // end main
+  
+  public MultiButton(){
+    super("Multiple Button Events");
+    init();
+  } // end multi-button
+  
+  public void init(){
+    //initializes screen
+    Container mainPanel = this.getContentPane();
+      mainPanel.setLayout(new BorderLayout(0,1));
+
+      mainPanel.add(lblOutput);
+      mainPanel.add(btnOne);
+      mainPanel.add(btnOne);
+      mainPanel.add(btnOne);
+      mainPanel.add(btnOne);
+      
+      btnOne.addActionListener(this);
+      btnTwo.addActionListener(this);
+      btnThree.addActionListener(this);
+      btnFour.addActionListener(this);
+      
+  } // end init
+  
+  public void actionPerformed(ActionEvent e){
+    String command = e.getActionCommand();
+    if (e.equals("one"){
+        lblOutput.setText("ichi");
+    } else if (e.equals("two"){
+        lblOutput.setText("ichi");
+    } else if (e.equals("three"){
+        lblOutput.setText("ichi");
+    } else if (e.equals("four"){
+        lblOutput.setText("ichi");
+    } else{
+        lblOutput.setText("error");
+    } // end if
+  } // end actionPerformed 
+} // end class def       
+      
