@@ -1,11 +1,11 @@
 //Crypto.java
 
-import java.util.Random;
-import java.util.Scanner;
+//import java.util.Random;
+//import java.util.Scanner;
 
 public class Crypto {
   // for now, key is hard-wired in.
-  Scanner input = new Scanner(System.in);
+  java.util.Scanner input = new java.util.Scanner(System.in);
   String alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   String key =   "UBWKOVGAPRFJLCQHZENSXDMYTI";
     
