@@ -20,4 +20,4 @@ public class WriteFile{
 			System.out.println(e.getMessage());
 		} // end try
 	} // end constructor
-} // end class def
+}// end class def
