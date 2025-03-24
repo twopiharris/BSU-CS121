@@ -38,8 +38,10 @@ public class SerialDemo {
 } // end class def
 
 class Critter implements Serializable{
+	// all instance variables must be serializable
 	String name;
 	int age;
+	public static long serialVersionUID = 1L;
 	
 	public Critter(String lName, int lAge){
 		name = lName;

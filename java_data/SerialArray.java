@@ -1,7 +1,8 @@
 import java.io.*;
 public class SerialArray {
 
-
+    // note that creating an array makes a new class
+    // it does NOT instantiate the Critters
     public Critter[] critters = new Critter[5];
 	
 	public static void main(String[] args) {
@@ -24,7 +25,7 @@ public class SerialArray {
     } // end initCritters
 
     public void saveCritters(){
-
+        // an array of Serializable elements is also serializable
 	try {
 	    FileOutputStream fo = new FileOutputStream("critterArray.dat");
 	    ObjectOutputStream obOut = new ObjectOutputStream(fo);
@@ -50,7 +51,8 @@ public class SerialArray {
 class Critter implements Serializable{
     String name;
     int age;
-	
+    long serialVersionUID = 1L;
+
     public Critter(String lName, int lAge){
 	name = lName;
 	age = lAge;
