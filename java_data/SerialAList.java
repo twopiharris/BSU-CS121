@@ -3,18 +3,19 @@ import java.util.*;
 
 public class SerialAList {
 
-  ArrayList<Critter> critters = new ArrayList<Critter>();
-  //CritterList critters = new CritterList();
+  //ArrayList<Critter> critters = new ArrayList<Critter>();
+  CritterList critters = new CritterList();
 
   public static void main(String[] args) {
     new SerialAList();
   } // end main
 
   public SerialAList(){
-    initCritters();
-    saveCritters();
+    //initCritters();
+    //saveCritters();
     loadCritters();
     showCritters();
+    saveCritters();
   } // end constructor
 
 
@@ -31,18 +32,23 @@ public class SerialAList {
       FileOutputStream fo = new FileOutputStream("critterArray.dat");
       ObjectOutputStream obOut = new ObjectOutputStream(fo);
       obOut.writeObject(critters);
+      obOut.close();
+      fo.close();
     } catch (Exception e){
       System.out.println(e.getMessage());
     } // end try
+   
   } // end saveCritters
 
   public void loadCritters(){
     try {
       FileInputStream fIn = new FileInputStream("critterArray.dat");
       ObjectInputStream obIn = new ObjectInputStream(fIn);
-      critters = (ArrayList<Critter>)obIn.readObject();
-      //critters = (CritterList)obIn.readObject();
+      //critters = (ArrayList<Critter>)obIn.readObject();
+      critters = (CritterList)obIn.readObject();
       System.out.println(critters.get(0).name);
+      obIn.close();
+      fIn.close();
     }catch (Exception e){
       System.out.println(e.getMessage());
    } // end try
@@ -61,7 +67,9 @@ public class SerialAList {
 class Critter implements Serializable{
   String name;
   int age;
-  long serialVersionUID = 1L;
+  int IQ = 75;
+  
+  final static long serialVersionUID = 2L;
 
   public Critter(String lName, int lAge){
     name = lName;
@@ -70,5 +78,5 @@ class Critter implements Serializable{
     
 } // end class def
 
-//class CritterList extends ArrayList<Critter> {};
+class CritterList extends ArrayList<Critter> {};
 
