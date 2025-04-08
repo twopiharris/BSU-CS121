@@ -1,0 +1,65 @@
+#include <iostream>
+#include "Node.h"
+
+using namespace std;
+
+void buildSample();
+void inOrder(Node * n);
+void preOrder(Node * n);
+void postOrder(Node * n);
+
+Node * head = NULL;
+
+int main(){
+
+  Node one = Node("1", NULL, NULL);
+  Node three = Node("3", NULL, NULL);
+  Node two = Node("2", &one, &three);
+  Node five = Node("5", NULL, NULL);
+  Node seven = Node("7", NULL, NULL);
+  Node six = Node("6", &five, &seven);
+  Node four = Node("4", &two, &six);
+
+  head = &four;
+
+
+  cout << "in-order" << endl;
+  inOrder(head);
+  cout << endl;
+
+  cout << "pre-order" << endl;
+  preOrder(head);
+  cout << endl;
+
+  cout << "post-order" << endl;
+  postOrder(head);
+  cout << endl;
+
+}
+
+void inOrder(Node * nPtr){
+  if (nPtr != NULL){
+    Node n = *nPtr;
+    inOrder(n.getLeft());
+    cout << n.getData() << endl;
+    inOrder(n.getRight());
+  } // end if
+} // end method
+
+void preOrder(Node * nPtr){
+  if (nPtr != NULL){
+    Node n = *nPtr;
+    cout << n.getData() << endl;
+    inOrder(n.getLeft());
+    inOrder(n.getRight());
+  } // end if
+} // end method
+
+void postOrder(Node * nPtr){
+  if (nPtr != NULL){
+    Node n = *nPtr;
+    inOrder(n.getLeft());
+    inOrder(n.getRight());
+    cout << n.getData() << endl;
+  } // end if
+} // end method
