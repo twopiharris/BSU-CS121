@@ -1,0 +1,19 @@
+tree: main.o Node.o
+	g++ -g main.o Node.o -o tree
+
+main.o: main.cpp Node.h
+	g++ -g -c main.cpp
+
+Node.o: Node.h Node.cpp
+	g++ -g -c Node.cpp
+
+clean:
+	rm *.o
+	rm tree
+
+run: tree
+	./tree
+
+debug: tree
+	gdb ./tree
+
