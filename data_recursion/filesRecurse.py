@@ -14,7 +14,8 @@
 import os
 
 def listFiles(dir):
-  print "_____%s_____" % dir
+  #print "_____%s_____" % dir
+  print(f"_____{dir}_____")
   for fileName in os.listdir(dir):
     print(fileName)
     fullFileName = os.path.join(dir, fileName)
