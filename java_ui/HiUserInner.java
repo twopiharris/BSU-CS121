@@ -35,16 +35,17 @@ public class HiUserInner extends JFrame {
         surface.add(txtInput);
         surface.add(clickMe);
         clickMe.addActionListener(
-		  new ActionListener(){
-    			public void actionPerformed(ActionEvent e){
-    	  			System.out.println(e.getSource());
-		  			System.out.println(e.getActionCommand());
-        			System.out.println("I got clicked");
-        			String user = txtInput.getText();
-        			lblOutput.setText("Hi there, " + user + "!");
-    			} // end actionPerformed
-		} // end actionAdapter
-	);
+          new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+              //System.out.println(e.getSource());
+              //System.out.println(e.getActionCommand());
+              System.out.println("I got clicked");
+              String user = txtInput.getText();
+              lblOutput.setText("Hi there, " + user + "!");
+            } // end actionPerformed
+          } // end actionAdapter
+        );
+
         this.pack();
         this.setVisible(true);
     } // end constructor

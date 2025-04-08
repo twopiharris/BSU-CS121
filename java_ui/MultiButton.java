@@ -41,6 +41,8 @@ class MultiButton extends JFrame implements ActionListener{
        
       this.setSize(200, 200);
       this.setVisible(true);
+      this.setDefaultCloseOperation(this.EXIT_ON_CLOSE);
+
   } // end init
   
   public void actionPerformed(ActionEvent e){
@@ -53,7 +55,7 @@ class MultiButton extends JFrame implements ActionListener{
 	}else if (theButton == btnThree){
 		lblOutput.setText("Tres");
 	}else {
-		lblOutput.setText("Cuatro");
+		lblOutput.setText("Quatro");
 	} // end if
 	
 	
