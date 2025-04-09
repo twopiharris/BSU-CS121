@@ -33,6 +33,12 @@ public class HiUserEvent extends JFrame {
     public HiUserEvent() {
         super("Hi, user");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+	Font myFont = new Font("Serif",0, 40);
+	output.setFont(myFont);
+	clickMe.setFont(myFont);
+	input.setFont(myFont);
+
         Container surface = this.getContentPane();
         surface.setLayout(new GridLayout(3,1));
         surface.add(output);

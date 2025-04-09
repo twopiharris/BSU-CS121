@@ -29,6 +29,12 @@ public class HiUserInner extends JFrame {
     public HiUserInner() {
         super("Basic button press");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+	Font myFont = new Font("Serif",0, 40);
+	lblOutput.setFont(myFont);
+	clickMe.setFont(myFont);
+	txtInput.setFont(myFont);
+
         Container surface = this.getContentPane();
         surface.setLayout(new GridLayout(0,1));
         surface.add(lblOutput);

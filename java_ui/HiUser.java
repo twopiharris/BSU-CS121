@@ -18,7 +18,7 @@ public class HiUser extends JFrame{
 	
 
 
-	 JLabel output = new JLabel("Hi there");
+    JLabel output = new JLabel("Hi there");
     JButton clickMe = new JButton("Smite me");
     JTextField input = new JTextField("Input");
     
@@ -29,10 +29,16 @@ public class HiUser extends JFrame{
     /** Creates a new instance of HiUser */
     public HiUser() {
         super("Hi, user");
+	
+	Font myFont = new Font("Serif",0, 40);
+	output.setFont(myFont);
+	clickMe.setFont(myFont);
+	input.setFont(myFont);
+
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Container surface = this.getContentPane();
-        //surface.setLayout(new FlowLayout());
-        surface.setLayout(new GridLayout(0,1));
+	//surface.setLayout(new FlowLayout());
+        surface.setLayout(new GridLayout(0, 1));
         surface.add(output);
         surface.add(clickMe);
         surface.add(input);

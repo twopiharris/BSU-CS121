@@ -20,7 +20,7 @@
             
             lblOutput.setBackground(Color.YELLOW);
             lblOutput.setForeground(Color.RED);
-            //lblOutput.setOpaque(true);
+            lblOutput.setOpaque(true);
             surface.setBackground(Color.GREEN);
             
             Font myFont = new Font("Serif", Font.ITALIC + Font.BOLD, 40);
