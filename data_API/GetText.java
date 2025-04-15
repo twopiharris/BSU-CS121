@@ -1,5 +1,5 @@
 //  GetText.java
-//  pull content from opentdb using Java
+//  pull content from APIs using Java
 //  can be reused for any open API
 //  This version works fine with plain text results
 //  Does not require a parser
@@ -14,18 +14,26 @@ public class GetText {
   } // end main
 
   public GetText(){
+    Scanner input = new Scanner(System.in);
+
     // replace this with whatever query you want
     String query = "https://binaryjazz.us/wp-json/genrenator/v1/genre";
     String result = readStringFromURL(query);
     System.out.println("Music genre of the day: " + result);
-    
+
     result = readStringFromURL("https://wttr.in/Muncie?format=2&u");
     System.out.println("Today's weather in Muncie: " + result);
+
+    System.out.print("Which city do you want weather for? ");
+    String city = input.nextLine();
+    result = readStringFromURL("https://wttr.in/" + city + "?format=2&u");
+    System.out.println(result);
 
   } // end constructor
 
   public String readStringFromURL(String query){
-    // adapted from https://alvinalexander.com/blog/post/java/how-open-read-url-java-url-class-example-code/
+    // adapted from 
+    // https://alvinalexander.com/blog/post/java/how-open-read-url-java-url-class-example-code/
 
     // start with a blank String we will build up line by line
     String result = "";
