@@ -11,8 +11,8 @@ public class SerialAList {
   } // end main
 
   public SerialAList(){
-    //initCritters();
-    //saveCritters();
+    initCritters();
+    saveCritters();
     loadCritters();
     showCritters();
     saveCritters();
