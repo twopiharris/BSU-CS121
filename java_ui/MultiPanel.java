@@ -38,7 +38,7 @@ public class MultiPanel extends JFrame implements ActionListener{
         
         pnlSouth.setLayout(new FlowLayout());
         pnlSouth.add(btnA);
-    pnlSouth.add(btnB);
+        pnlSouth.add(btnB);
         btnA.addActionListener(this);
         btnB.addActionListener(this);
 

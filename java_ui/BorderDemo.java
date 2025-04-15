@@ -40,7 +40,6 @@ public class BorderDemo extends JFrame implements ActionListener{
     lblOutput.setHorizontalAlignment(JLabel.CENTER);
     lblOutput.setOpaque(true);
     lblOutput.setBackground(Color.yellow);
-
     this.setDefaultCloseOperation(BorderDemo.EXIT_ON_CLOSE);
     //this.pack();
     this.setSize(500, 400);
