@@ -22,9 +22,9 @@ public class APItest {
 
   public APItest(){
     // replace this with whatever query you want
-    String query = "http://time.jsontest.com";
+    String query = "https://opentdb.com/api.php?amount=10&category=18&type=multiple";
       String result = readStringFromURL(query);
-      System.out.println(result);
+      //System.out.println(result);
       // call the JSON parser
       parseJSON(result);
 
@@ -68,57 +68,47 @@ public class APItest {
 
     // you will need to build a custom class in the 
     // 'shape' of the data
-    DateTime dt = gson.fromJson(jsonString, DateTime.class);
-    System.out.println(dt);
-
+    QuestionList ql = gson.fromJson(jsonString, QuestionList.class);
+    //DateTime dt = gson.fromJson(jsonString, DateTime.class);
+    ql.printQuestions();
  } // end parseJson
 
 
 } // end main class def
 
-class DateTime {
-  // make a property for each element of 
-  // the JSON with the appropriate name and type
+// make a class containing top level values in JSON
 
-  private String date;
-  private long milliseconds_since_epoch;
-  private String time;
+class QuestionList {
+  public String response_code;
+  public Question[] results = new Question[10];
+  
+  // add a method so we can print things out.
+  public void printQuestions(){
+    for (Question q: results){
+      System.out.println(q);
+    } // end for
+  } // end printQuestions
+} // end questionList def
 
-  public DateTime(){
-    this.date = "";
-    this.milliseconds_since_epoch = 0L;
-    this.time = "";
-  } // end constructor
+// response also has a subclass, so make that too
 
-  // create standard setters and getters for each attribute
-  public void setDate(String date){
-    this.date = date;
-  } // end setDate
+class Question {
+  public String type;
+  public String difficulty;
+  public String category;
+  public String question;
+  public String correct_answer;
+  public String[] incorrect_answers = new String[3];
 
-  public String getDate(){
-    return this.date;
-  } // end getDate
-
-  public void setMilliseconds_since_epoch(long milliseconds_since_epoch){
-    this.milliseconds_since_epoch = milliseconds_since_epoch;
-  } // end setMSE
-
-  public long getMilliseconds_since_epoch(){
-    return this.milliseconds_since_epoch;
-  } // end getMSE
-
-  public void setTime(String time){
-    this.time = time;
-  } // end setTime
-
-  public String getTime(){
-    return this.time;
-  } // end getTime
-
-  // overwrite toString for an easy-to-read output
+  // overwrite toString for convenience
   public String toString(){
-    return ("Date: " + date + ", Time: " + time + ", Epoch: " + milliseconds_since_epoch);
+    String result = "";
+    result += question + "\n";
+    result += correct_answer + "\n";
+    for (String inc: incorrect_answers){
+      result += inc + "\n";
+    } // end for
+    return result;
   } // end toString
-
-} // end class def
+} // end Question
 
