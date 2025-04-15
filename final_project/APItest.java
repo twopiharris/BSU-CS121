@@ -3,7 +3,7 @@
 //  can be reused for any open API
 //  uses GSON library for parsing JSON
 //  Compile: javac -cp gson-2.8.9.jar:. APItest.java
-//  run: java -cp gson-2.8.9.jar:. APItest.java
+//  run: java -cp gson-2.8.9.jar:. APItest
 //  note: on Windows, replace : with ; in compile and 
 //  run commands.
 //  or install jar file to local IDE
