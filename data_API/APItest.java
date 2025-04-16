@@ -69,7 +69,6 @@ public class APItest {
     // you will need to build a custom class in the 
     // 'shape' of the data
     QuestionList ql = gson.fromJson(jsonString, QuestionList.class);
-    //DateTime dt = gson.fromJson(jsonString, DateTime.class);
     ql.printQuestions();
  } // end parseJson
 
