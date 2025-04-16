@@ -26,6 +26,8 @@ public class GetText {
 
     System.out.print("Which city do you want weather for? ");
     String city = input.nextLine();
+    // replace spaces with + signs in queries
+    city = city.replace(' ', '+');
     result = readStringFromURL("https://wttr.in/" + city + "?format=2&u");
     System.out.println(result);
 
