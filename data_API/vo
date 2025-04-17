@@ -1,0 +1,13 @@
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set autoindent
+set number
+
+command M !make
+command Mr !make run
+command Cj !javac -g %
+command Rj !java %<
+command Cg !javac -cp gson-2.8.9.jar:. %
+command Rg !java -cp gson-2.8.9.jar:. %<
+

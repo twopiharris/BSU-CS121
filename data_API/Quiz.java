@@ -1,9 +1,9 @@
-//  APItest.java
+//  Quiz.java
 //  pull content from opentdb using Java
 //  can be reused for any open API
 //  uses GSON library for parsing JSON
-//  Compile: javac -cp gson-2.8.9.jar:. APItest.java
-//  run: java -cp gson-2.8.9.jar:. APItest
+//  Compile: javac -cp gson-2.8.9.jar:. Quiz.java
+//  run: java -cp gson-2.8.9.jar:. Quiz
 //  note: on Windows, replace : with ; in compile and 
 //  run commands.
 //  or install jar file to local IDE
@@ -15,18 +15,23 @@ import java.io.*;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-public class APItest {
+public class Quiz {
+  QuestionList ql;
+
   public static void main(String[] args){
-    new APItest();
+    new Quiz();
   } // end main
 
-  public APItest(){
+  public Quiz(){
     // replace this with whatever query you want
     String query = "https://opentdb.com/api.php?amount=10&category=18&type=multiple";
-      String result = readStringFromURL(query);
-      //System.out.println(result);
-      // call the JSON parser
-      parseJSON(result);
+    String result = readStringFromURL(query);
+    //System.out.println(result);
+    // call the JSON parser
+    parseJSON(result);
+    
+    // take the quiz
+    this.ql.takeQuiz();
 
   } // end constructor
 
@@ -68,8 +73,7 @@ public class APItest {
 
     // you will need to build a custom class in the 
     // 'shape' of the data
-    QuestionList ql = gson.fromJson(jsonString, QuestionList.class);
-    ql.printQuestions();
+   this.ql = gson.fromJson(jsonString, QuestionList.class);
  } // end parseJson
 
 
@@ -78,8 +82,8 @@ public class APItest {
 // make a class containing top level values in JSON
 
 class QuestionList {
-  public String response_code;
-  public Question[] results = new Question[10];
+  String response_code;
+  Question[] results = new Question[10];
   
   // add a method so we can print things out.
   public void printQuestions(){
@@ -87,17 +91,29 @@ class QuestionList {
       System.out.println(q);
     } // end for
   } // end printQuestions
+
+  // add a method to take the quiz
+  public void takeQuiz(){
+    int score = 0;
+    for (Question q: results){
+      if(q.ask()){
+        score++;
+      } // end if
+    } // end for
+    System.out.println("You got " + score + "/10 correct");
+  } // end takeQuiz
+
 } // end questionList def
 
 // response also has a subclass, so make that too
 
 class Question {
-  public String type;
-  public String difficulty;
-  public String category;
-  public String question;
-  public String correct_answer;
-  public String[] incorrect_answers = new String[3];
+  String type;
+  String difficulty;
+  String category;
+  String question;
+  String correct_answer;
+  String[] incorrect_answers = new String[3];
 
   // overwrite toString for convenience
   public String toString(){
@@ -109,5 +125,51 @@ class Question {
     } // end for
     return result;
   } // end toString
+
+  // create a method to ask a question
+  public boolean ask(){
+    Scanner input = new Scanner(System.in);
+    boolean result = false;
+
+    // build a shuffled arraylist with the possible answers
+    ArrayList<String> answers = new ArrayList<String>();
+    answers.add(correct_answer);
+    for (String a: incorrect_answers){
+      answers.add(a);
+    } // end for
+    Collections.shuffle(answers);
+
+    System.out.println(question);
+
+    for (int i = 0; i < answers.size(); i++){
+      System.out.println("  " + i + ") " + answers.get(i));
+    } // end for
+
+    System.out.print("Your answer: ");
+    
+    // look for an input with exception handling
+    int guess = 0;    
+    try {
+      guess = input.nextInt();
+    } catch (Exception e){
+      System.out.println("invalid input. Guessing 0");
+      guess = 0;
+    } // end try
+
+    // check for correct answer
+    if (answers.get(guess).equals(correct_answer)){
+      result = true;
+      System.out.println("Correct!");
+    } else {
+      System.out.println("Not correct");
+      System.out.println("The correct answer was...");
+      System.out.println(correct_answer);
+    } // end if
+
+    System.out.println();
+
+    return result;
+  } // end ask
+
 } // end Question
 

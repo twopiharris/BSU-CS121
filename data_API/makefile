@@ -1,7 +1,7 @@
-APItest: APItest.java
-	javac -cp gson-2.8.9.jar:. APItest.java
+Quiz: Quiz.java
+	javac -cp gson-2.8.9.jar:. Quiz.java
 
-run: APItest
-	java -cp gson-2.8.9.jar:. APItest
+run: Quiz
+	java -cp gson-2.8.9.jar:. Quiz
 
 
