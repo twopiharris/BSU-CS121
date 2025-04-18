@@ -29,7 +29,10 @@ public class Quiz {
     //System.out.println(result);
     // call the JSON parser
     parseJSON(result);
-    
+   
+    // pretty print results
+    //this.ql.printQuestions();
+
     // take the quiz
     this.ql.takeQuiz();
 
@@ -67,12 +70,12 @@ public class Quiz {
   } // end readString
 
  public void parseJSON(String jsonString){
-    GsonBuilder builder = new GsonBuilder();
+   GsonBuilder builder = new GsonBuilder();
 
-    Gson gson = builder.create();
+   Gson gson = builder.create();
 
-    // you will need to build a custom class in the 
-    // 'shape' of the data
+   // you will need to build a custom class in the 
+   // 'shape' of the data
    this.ql = gson.fromJson(jsonString, QuestionList.class);
  } // end parseJson
 
@@ -82,9 +85,10 @@ public class Quiz {
 // make a class containing top level values in JSON
 
 class QuestionList {
-  String response_code;
-  Question[] results = new Question[10];
-  
+
+  //String response_code;
+  ArrayList<Question> results = new ArrayList<Question>();
+
   // add a method so we can print things out.
   public void printQuestions(){
     for (Question q: results){
@@ -113,7 +117,7 @@ class Question {
   String category;
   String question;
   String correct_answer;
-  String[] incorrect_answers = new String[3];
+  ArrayList<String> incorrect_answers = new ArrayList<String>();
 
   // overwrite toString for convenience
   public String toString(){
