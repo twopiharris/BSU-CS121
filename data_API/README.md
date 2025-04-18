@@ -1,32 +1,4 @@
-# Resources used in these examples
-
-* [GSON main page](https://github.com/google/gson)
-* [Local copy of GSON.jar](gson-2.8.9.jar)
-* [wtter.in main page](https://github.com/chubin/wttr.in)
-* [wtter.in endpoint](https://wttr.in/)
-* [Newton math processor](https://github.com/aunyks/newton-api)
-* [Newton endpoint](https://newton.now.sh/api/v2/OPERATION/EXPRESSION)
-* [Genrenator](https://binaryjazz.us/genrenator-api/)
-* [genrenator endpoint](https://binaryjazz.us/wp-json/genrenator/v1/genre/)
-* [open trivia database](https://opentdb.com/)
-* [open tbd api](https://opentdb.com/api_config.php) with endpoint generation tool
-
-  <h2>Suggested APIS</h2>
-  <p>
-  Please begin by looking at the following APIs.  They have been selected from a larger list of 
-  publicly available APIs, with the following criterion:
-  </p>
-<ul>
-    <li>Interesting content</li>
-    <li>No authentication tokens or logins are required</li>
-    <li>School appropriate content</li>
-    <li>All data is free and open</li>
-    <li>The difficulty level seems appropriate for beginners</li>
-</ul>
-  
-  <p>
-    Here are the suggested APIs.  Note that availability or capability might change
-  </p>
+# Selected APIs
 
 <ul>
     <li>
@@ -88,5 +60,23 @@
       real-time and historical weather data</li>
     <li>
       <a href = "https://github.com/robertoduessmann/weather-api">Weather API</a>
-      A simpler but less detailed weather app</a>
+      A simpler but less detailed weather app</a></li>
+
 </ul>
+
+# Open APIs
+
+There is a great list of open API resources here:  
+[public apis](https://github.com/public-api-lists/public-api-lists?tab=readme-ov-file)
+
+Notes on these APIs.
+
+* Look for authentication to be NO.  The other ones require an authentication key, which can be tricky
+* Look at the link to see how the API works. Each one is different
+* Learn how to build a URL for the API through the browser
+* The pretty-print option in Chrome makes JSON easier to read
+* Some APIs return plain text, some return JSON
+* There is sometimes a fee for a lot of requests, so check for this before automating a lot of calls to an API
+* Note that APIs do sometimes time out or go out of business, so you are relying on the kindness of others
+
+
