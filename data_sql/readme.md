@@ -4,8 +4,7 @@
 
 ## ER for schedule
 
-```
-mermaid
+```mermaid
 erDiagram
     
     cell {
