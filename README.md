@@ -17,7 +17,7 @@ Memory, algorithms, and data structures
   <li><a href = "cpp_derived_types">cpp_derived_types</a> Compound data in C and C++</li>
   <li><a href = "cpp_basic_oop">cpp_basic_oop</a> Basic Object Oriented Programming</li>
   <li><a href = "cpp_adv_oop">cpp_adv_oop</a> Advanced Object Oriented Programming</li>
-  <li><a href = "cpp_inheritance">cpp_inheritance</a></li> Inheritance
+  <li><a href = "cpp_inheritance">cpp_inheritance</a> Inheritance</li> 
   <li><a href = "cpp_io">cpp_io</a> Input and output streams</li>
   <li><a href = "cpp_managed_pointers">cpp_managed_pointers</a> Automatic garbage collection</li>
   <li><a href = "cpp_templates">cpp_templates</a> Re-usable objects</li>
