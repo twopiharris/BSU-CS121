@@ -1,4 +1,4 @@
-    <h1>C examples</h1>
+<h1>C examples</h1>
     <ul>
         <li><a href="hi.c">hi.c</a>
             Basic C program</li>
@@ -17,3 +17,4 @@
         <li><a href = "lineIn.c">lineIn.c</a>
             line input</li>
     </ul>
+
