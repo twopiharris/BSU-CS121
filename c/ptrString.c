@@ -11,7 +11,6 @@ int main(){
     char fName[20] = "Andy";
     printf ("Hi there %s! \n", fName);
 
-/*
     //the next two lines are equivalent
     printf ("fName[3]: %c \n", fName[3]);
     printf ("fName[3]: %c \n", *(fName + 3));
@@ -47,7 +46,7 @@ int main(){
     printf ("%s \n", fName);
 
     //copying a string does NOT do what you expect!
-    fName = lName;
+    //fName = lName;
 
     //printf("%s %s", fName, lName);
 
@@ -62,7 +61,6 @@ int main(){
     } else {
       printf ("They are different! \n");
     } // end if
-
 
     //previous statement was checking the ADDRESSES
     //use strcmp for true equality
@@ -87,5 +85,4 @@ int main(){
 
     //rest of string is in memory but not displayed
     printf ("%c \n", realName[5]);
-*/
 } // end main

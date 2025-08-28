@@ -27,7 +27,6 @@ int main(){
     printf("%d (%d): %d \n", i, par[i], score[i]);
   } // end for
 
-
   //array is actually a pointer to the first element!
   printf("score for 0: %d\n", *score);
   // this line actually shows the address of the first element
