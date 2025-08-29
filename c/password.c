@@ -13,11 +13,15 @@
         say "You lose"
         exit the loop
 */
+
 #include <stdio.h>
 #include <string.h>
 
+#define TRUE -1
+#define FALSE 0
+
 int main(){
-  int keepGoing = 1;
+  int keepGoing = TRUE;
   char* correct = "CS121";
   char guess[10];
   int turns = 0;
@@ -29,12 +33,12 @@ int main(){
 
     if (strcmp(guess, correct) == 0){
       printf("You got it!");
-      keepGoing = 0;
-    } // end if
-    
-    if (turns > 3){
-      printf("To many tries. Launching missiles.");
-      keepGoing = 0;
+      keepGoing = FALSE;
+    } else {
+      if (turns >= 3){
+        printf("Too many tries. Launching missiles.");
+        keepGoing = FALSE;
+      } // end if
     } // end if
   } // end while
   return 0;
