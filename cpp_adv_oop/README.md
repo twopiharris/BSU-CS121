@@ -1,4 +1,4 @@
-    <h1>Memory Management Examples</h1>
+<h1>Memory Management Examples</h1>
     <ul>
       <li><a href = "critterHeap.cpp">critterHeap.cpp</a>
         Critter with heap memory</li>
