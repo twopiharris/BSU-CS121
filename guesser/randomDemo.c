@@ -3,12 +3,13 @@
 #include <time.h>
 
 int main(){
-  printf("Hello. \n");
   srand(time(NULL));
+  printf("Hey. \n");
   for (int i = 0; i < 10; i++){
-    int myNumber = (rand() % 6) + 1;
-    printf("%d \n", myNumber);
+    int x = rand();
+    int y = x % 100;
+    printf("%d %d \n", x, y);
   } // end for
   return 0;
-} // end main
+}
 
