@@ -44,17 +44,24 @@
 #include <time.h>
 #include <stdbool.h>
 
-void guess();
+int guess();
 void report(int, char*);
 
 int main(){
-  // I can't call guess because it hasn't been defined yet
-  guess();
+  char userName[20];
+  printf("Hi. what's your name? ");
+  scanf("%s", userName);
+  printf("Let's play a game, %s \n", userName);
+  
+  int turns = 0;
+  
+  turns = guess();
+  report(turns, userName);
+  
   return 0;
 } // end main
 
-void guess(){
-  char userName[20];
+int guess(){
   int turns = 0;
   int guess = -999;
   int keepGoing = true;
@@ -62,10 +69,7 @@ void guess(){
   srand(time(NULL));
   int correct = (rand() % 100) + 1;
 
-  printf("Hi. what's your name? ");
-  scanf("%s", userName);
 
-  printf("Let's play a game, %s \n", userName);
 
   while (keepGoing){
     turns++;
@@ -81,7 +85,7 @@ void guess(){
       keepGoing = false;
     } // end if
   } // end while
-
+  return turns;
 } // end guess 
 
 void report(int score, char* name){
