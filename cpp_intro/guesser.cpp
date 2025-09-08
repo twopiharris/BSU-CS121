@@ -19,8 +19,12 @@ int main(){
     turns++;
     std::cout << turns << ") Please enter a number: ";
     std::cin >> guess;
-
-    if (guess < correct){
+    if (std::cin.fail()){
+      std::cout << "invalid. Ending game" << std::endl;
+      keepGoing = false;
+      guess = 9999;
+      turns = 9999;
+    } else if (guess < correct){
       std::cout << "too low." << std::endl;
     } else if (guess > correct){
       std::cout << "too high." << std::endl;

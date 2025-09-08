@@ -1,12 +1,14 @@
 #include <iostream>
 
+using namespace std;
+
 int main(){
-  std::string userName;
+  string userName;
 
-  std::cout << "Hi. Please enter your name. ";
-  std::cin >> userName;
+  cout << "Hi. Please enter your name. ";
+  cin >> userName;
 
-  std::cout << "Hello " << userName << ". Nice to meet you. " << std::endl;
+  cout << "Hello " << userName << ". Nice to meet you. " << endl;
 
   return 0;
 }  // end main
