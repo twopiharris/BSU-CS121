@@ -3,13 +3,7 @@
 // swap.cpp
 // demonstrates swapping with references
 
-
-void swap(int& a, int& b){
-  int temp = a;
-  a = b;
-  b = temp;
-} // end swap
-
+void swap(int&, int&); 
 
 int main(){
   int x = 3;
@@ -26,3 +20,9 @@ int main(){
   std::cout << "Y: " << y << std::endl;
   return(0);
 } // end main
+
+void swap(int& a, int& b){
+  int temp = a;
+  a = b;
+  b = temp;
+} // end swap
