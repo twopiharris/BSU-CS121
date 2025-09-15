@@ -68,7 +68,6 @@ int main(){
   Critter c;
   c.setName("George");
   std::cout << "critter: " << c.getName() << std::endl;
-
   //testing single parameter constructor
   Critter d = Critter("Harold");
   std::cout << "critter d: " << d.getName() << std::endl;
