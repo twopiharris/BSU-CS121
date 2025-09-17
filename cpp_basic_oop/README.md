@@ -17,3 +17,25 @@
   <li><a href = "makefiles.md">makefiles.md</a></li>
 </ul>
 
+# UML of Critter example
+```mermaid
+classDiagram
+ class Critter {
+    - string name
+    + Critter()
+    + Critter(string name)
+    + sayHi()
+    + setName(string name)
+    + string getName()
+ }
+
+ class Car {
+    - Critter driver
+    + Car()
+    + setDriver(Critter driver)
+    + critter getDriver()
+    + string getDriverName()
+ }
+
+ Car o-- Critter
+ ```
