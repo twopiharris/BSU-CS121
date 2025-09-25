@@ -15,6 +15,8 @@
 		    Data file used by fileIO.cpp</li>
                 <li><a href = "ssConv.cpp">ssConv.cpp</a>
                     Using a stringstream to convert data types</li>
+                <li><a href = "sToI.cpp">sToI.cpp"</a>
+                    Using stoi to convert strings to integers</li>
                 <li><a href = "numString.dat">numString.dat</a>
                     Data file for ssConv.cpp</li>
                 <li><a href = "csv.cpp">csv.cpp</a>
