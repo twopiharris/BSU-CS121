@@ -36,8 +36,8 @@ Critter::~Critter(){
 
 void Critter::setName(std::string name){
   // name is a pointer, so set its value to the parameter
-  //*Critter::name = name;
-  this->name = name;
+  *Critter::name = name;
+  //this->name = name;
 
   // the pointer (Critter::name) remains on stack, 
   // but it points to data on the heap
@@ -72,7 +72,7 @@ int main(){
   // pointer will be destroyed when function goes
   // out of scope
   // critter array is built on heap
-  Critter *cA = new Critter[3];
+  Critter* cA = new Critter[3];
   
   // arrays of objects use their no-parameter constructor
   // that's why a C++ object must have such a thing

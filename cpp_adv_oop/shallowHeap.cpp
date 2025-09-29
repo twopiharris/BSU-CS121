@@ -4,21 +4,18 @@
 //the default shallow copy may not be sufficient.
 
 #include <iostream>
-#include <cstdio>
-#include <cstring>
 
-//using namespace std;
 
 class A{ // standard class w/out copy constructor
   private:
     //name is dynamic length, so it must be created on heap
-    char *name;
+    std::string* name;
   public:
     A(){
       //since name is defined on heap, size can be determined
       //at run-time
-      name = new char[20];
-      strcpy(name, "Fred");
+      name = new std::string();
+      *name = "Fred";
     } // end constructor
 
     //no explicit copy constructor built;
@@ -26,15 +23,15 @@ class A{ // standard class w/out copy constructor
 
     ~A(){
       //we now have a heap variable, so we must explicitly delete it
-      delete[] name;
+      delete name;
     } // end destructor
 
-    void setName(char const *name){
-      strcpy(A::name, name);
+    void setName(std::string name){
+      *A::name = name;
     } // end setName
 
     void greet(){
-      printf("my name is %s. \n", name);
+      std::cout << "My name is " << *name << std::endl;
     } // end greet
 }; // end A class def
 

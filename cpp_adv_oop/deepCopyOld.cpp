@@ -2,19 +2,22 @@
 //If a class uses heap variables,
 //the default shallow copy may not be sufficient.
 
+#include <cstdio>
+#include <cstring>
 #include <iostream>
 
+//using namespace std;
 
 class A{ // standard class w/out copy constructor
   private:
     //name is dynamic length, so it must be created on heap
-    std::string* name;
+    char *name;
   public:
     A(){
       //since name is defined on heap, size can be determined
       //at run-time
-      name = new std::string();
-      *name = "Fred";
+      name = new char[20];
+      strcpy(name, "Fred");
     } // end constructor
 
     A(const A &original){
@@ -22,10 +25,10 @@ class A{ // standard class w/out copy constructor
       //pass a reference to the original variable
 
       //allocate new heap space for this instance
-      name = new std::string();
+      name = new char[20];
 
       //copy values from the original to the instance on the heap
-      *name = *original.name;
+      strcpy(name, original.name);
       //this is considered a 'deep' copy, because it not only copies
       //stack values, it makes new heap values as needed
 
@@ -33,17 +36,16 @@ class A{ // standard class w/out copy constructor
 
     ~A(){
       //we now have a heap variable, so we must explicitly delete it
-      delete name;
+      delete[] name;
     } // end destructor
 
-    void setName(std::string name){
-      *A::name = name;
+    void setName(char const *name){
+      strcpy(A::name, name);
     } // end setName
 
     void greet(){
-      std::cout << "My name is " << *name << std::endl;
+      printf("my name is %s. \n", name);
     } // end greet
-
 }; // end A class def
 
 int main(){

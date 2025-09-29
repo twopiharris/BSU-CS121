@@ -1,32 +1,34 @@
 //shallowCopy.cpp
 
-#include <iostream>
+#include <cstdio>
+#include <cstring>
+
 
 class A{ // standard class w/out copy constructor
   private:
-    //name is created on stack
-    std::string name;
+    //name is fixed-length, so it can be created on stack
+    char name[20];
   public:
     A(){
-      name = "Fred";
+      strcpy(name, "Fred");
     } // end constructor
 
     ~A(){
       //no special destructor needed; no heap variables
     } // end destructor
 
-    void setName(std::string name){
-      A::name =  name;
+    void setName(char const *name){
+      strcpy(A::name, name);
     } // end setName
 
     void greet(){
-      std::cout << "my name is " << name << std::endl;
+      printf("my name is %s. \n", name);
     } // end greet
 
 }; // end A class def
 
 int main(){
-  std::cout << "Expecting Fred, Fred, George, Fred " << std::endl;
+  printf("Expecting Fred, Fred, George, Fred \n");
   //instantiate A
   A a;
   a.greet();
