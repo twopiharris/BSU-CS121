@@ -5,7 +5,7 @@
 
 void changeName();
 class Critter {
-  //note there is no external way to change the name
+  //note there is no intrinsic way to change the name
   //this is a horrible design, but stick with me for
   //the example
 
@@ -35,7 +35,7 @@ void changeName(){
 
   //because changeName is a friend function, it can access
   //private instance variables
-  c.name = "Inigo Montoya";
+  c.name = "Inego Montoya";
   c.printName();
 }
 
