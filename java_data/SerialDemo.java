@@ -18,8 +18,8 @@ public class SerialDemo {
 			FileOutputStream fo = new FileOutputStream("SerialCritter.dat");
 			ObjectOutputStream obOut = new ObjectOutputStream(fo);
 			obOut.writeObject(myCritter);
-	                obOut.close();
-		        fo.close();
+      obOut.close();
+      fo.close();
 		} catch (Exception e){
 			System.out.println(e.getMessage());
 		} // end try
@@ -32,8 +32,8 @@ public class SerialDemo {
     		FileInputStream fIn = new FileInputStream("SerialCritter.dat");
     		ObjectInputStream obIn = new ObjectInputStream(fIn);
     		myCritter = (Critter)obIn.readObject();
-        	System.out.println(myCritter.name);
-	        obIn.close();
+       	System.out.println(myCritter.name);
+	      obIn.close();
 		fIn.close();
     	}catch (Exception e){
     		System.out.println(e.getMessage());
