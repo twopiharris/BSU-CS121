@@ -11,7 +11,4 @@ three
 four
 five
 
-def hiThere():
-  print("please indent")
-
 
