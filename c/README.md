@@ -2,8 +2,12 @@
     <ul>
         <li><a href="hi.c">hi.c</a>
             Basic C program</li>
+        <li><a href - "for.c">for.c</a>
+            for loops</li>
         <li><a href = "hiUser.c">hiUser.c</a>
             'String' input and output</li>
+        <li><a href = "password.c">password.c</a>
+            password program</li>
         <li><a href="pointers.c">pointers.c</a>
             Introduction to pointers</li>
         <li><a href="ptrArray.c">ptrArray.c</a>
@@ -17,4 +21,5 @@
         <li><a href = "lineIn.c">lineIn.c</a>
             line input</li>
     </ul>
+
 
