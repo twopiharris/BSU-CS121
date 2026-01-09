@@ -4,9 +4,8 @@
 
 int main(){
   srand(time(NULL));
-  int a;
   for (int i = 0; i < 10; i++){
-    a = rand();
+    int a = rand();
     a = (a % 6) + 1;
     printf("%d ", a);
   } // end for
@@ -14,5 +13,4 @@ int main(){
 
   return 0;
 } // end main
-
 
