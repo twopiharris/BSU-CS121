@@ -16,6 +16,7 @@ int main(){
     printf ("fName[3]: %c \n", *(fName + 3));
     printf ("NOT fName[3]: %c \n", *fName + 3);
 
+    /*
     //you can assign an entire string to a character pointer
     char * lName = "Harris";
     printf("Hi, %s %s! \n", fName, lName);
@@ -85,4 +86,5 @@ int main(){
 
     //rest of string is in memory but not displayed
     printf ("%c \n", realName[5]);
+    */
 } // end main

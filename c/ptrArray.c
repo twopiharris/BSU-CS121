@@ -27,9 +27,9 @@ int main(){
     printf("%d (%d): %d \n", i, par[i], score[i]);
   } // end for
 
-  //array is actually a pointer to the first element!
+  //array is actually a pointer to element zero!
   printf("score for 0: %d\n", *score);
-  // this line actually shows the address of the first element
+  // this line actually shows the address of that element
   printf("score: %p \n", score);
   // this line shows the address of the next element (still not useful)
   printf("score + 1: %p \n", score + 1);
@@ -38,13 +38,10 @@ int main(){
   //be careful with order of operations!!
   printf("NOT score for 1: %d\n", *score + 1);
 
-
   //What if you try to print something that
   //isn't really part of the array?
   printf("Garbage: %d \n", *(score + 5));
-/*
-
-  */
+  
   return(0);
 } // end main
 

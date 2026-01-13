@@ -16,7 +16,6 @@ int main(){
     printf("value AT pA: %d \n", *pA);
     //printf("value AT a: %d \n", *a);
 
-/*
 
     // You can have a pointer to a pointer!
     int ** ppA = &pA;
@@ -28,5 +27,4 @@ int main(){
 
 
 
-    */
 } // end main
