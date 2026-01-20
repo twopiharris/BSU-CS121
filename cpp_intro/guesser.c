@@ -1,8 +1,8 @@
-/* Same Algorithm!
+/* Algorithm
  *
  * main():
- *   string userName
- *   int guess 
+ *   char[20] userName
+ *   int guess starts -999
  *   int correct will be randomly generated later
  *   int turns starts at 0
  *   int keepGoing start true
@@ -32,51 +32,42 @@
  *   else:
  *     say pretty good
  *
-  */
+ */
 
-#include <iostream>
-#include <cstdlib>
-#include <ctime>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <stdbool.h>
 
 int main(){
-  std::string userName;
-  int guess;
-  int correct;
+  char userName[20];
   int turns = 0;
-  bool keepGoing = true;
-  
-  srand(time(NULL));
-  correct = (rand() % 100) + 1;
+  int guess = -999;
+  int keepGoing = true;
 
-  std::cout << "Correct answer: " << correct << std::endl;
+  srand(time(NULL));
+  int correct = (rand() % 100) + 1;
+
+  printf("Hi. what's your name? ");
+  scanf("%s", userName);
+
+  printf("Let's play a game, %s \n", userName);
 
   while (keepGoing){
     turns++;
-    // ignore bad input for now...
-    std::cout << turns << ": Please make a guess: ";
-    std::cin >> guess;
+    printf("turn %d: Please enter a number. ", turns);
+    scanf("%d", &guess);
 
     if (guess < correct){
-      std::cout << "Too low." << std::endl;
+      printf ("too low...\n");
     } else if (guess > correct){
-      std::cout << "Too high." << std::endl;
+      printf ("too high...\n");
     } else {
-      std::cout << "You got it!" << std::endl;
+      printf("You got it!!! \n");
       keepGoing = false;
     } // end if
   } // end while
 
-  if (turns < 7){
-    std::cout << "Great work!" << std::endl;
-  } else if (turns > 7){
-    std::cout << "You could do better" << std::endl;
-  } else {
-    std::cout << "Average performance" << std::endl;
-  } // end if
-
-  
   return 0;
 } // end main
-
-  
 
