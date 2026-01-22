@@ -7,7 +7,7 @@ int main(){
   float real;
   std::string name;
 
-  std::cout << "Please enter a number: " << std::endl;
+  std::cout << "Please enter a number: " ;
   std::cin >> number;
   std::cout << "You said " << number << std::endl;
 
@@ -19,6 +19,7 @@ int main(){
   std::cin >> name;
   std::cout << "Hi there, " << name << "!" << std::endl;
 
+  
   std::cout << "Please enter your full name: ";
   //standard cin grabs only one string!
   //to get full line, clear buffer:

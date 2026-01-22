@@ -27,7 +27,7 @@ float getFloat(std::string prompt){
     } // end if
   } // end while
   return result;
-} // end getInt
+} // end getFloat
 
 int getInt(std::string prompt){
   bool keepGoing = true;
@@ -47,5 +47,3 @@ int getInt(std::string prompt){
   } // end while
   return result;
 } // end getInt
-
-
