@@ -46,24 +46,24 @@ class MultiButton extends JFrame implements ActionListener{
   } // end init
   
   public void actionPerformed(ActionEvent e){
-	 
-	Object theButton = e.getSource();
-	if (theButton == btnOne){
-		lblOutput.setText("Uno");
-	}else if (theButton == btnTwo){
-		lblOutput.setText("Dos");
-	}else if (theButton == btnThree){
-		lblOutput.setText("Tres");
-	}else {
-		lblOutput.setText("Quatro");
-	} // end if
-	
-	
-	/*
-	//alternately, use action command, which is
-	//caption of button or some other string set 
-	//manually.  Two items can call same command
-	 
+   
+    Object theButton = e.getSource();
+    if (theButton == btnOne){
+      lblOutput.setText("Uno");
+    }else if (theButton == btnTwo){
+      lblOutput.setText("Dos");
+    }else if (theButton == btnThree){
+      lblOutput.setText("Tres");
+    }else {
+      lblOutput.setText("Quatro");
+    } // end if
+  
+  
+  /*
+  //alternately, use action command, which is
+  //caption of button or some other string set 
+  //manually.  Two items can call same command
+   
     String command = e.getActionCommand();
     if (command.equals("one")){
         lblOutput.setText("ichi");
@@ -77,8 +77,8 @@ class MultiButton extends JFrame implements ActionListener{
         lblOutput.setText("error");
     } // end if
      */
-	  
-	  
+    
+    
   } // end actionPerformed 
 } // end class def       
       

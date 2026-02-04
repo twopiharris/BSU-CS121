@@ -30,10 +30,10 @@ public class HiUserListener extends JFrame implements ActionListener {
         super("Basic button press");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	
-	Font myFont = new Font("Serif",0, 40);
-	lblOutput.setFont(myFont);
-	clickMe.setFont(myFont);
-	txtInput.setFont(myFont);
+	      Font myFont = new Font("Serif",0, 40);
+	      lblOutput.setFont(myFont);
+	      clickMe.setFont(myFont);
+	      txtInput.setFont(myFont);
 
         Container surface = this.getContentPane();
         surface.setLayout(new GridLayout(0,1));
@@ -47,9 +47,9 @@ public class HiUserListener extends JFrame implements ActionListener {
     
     public void actionPerformed(ActionEvent e){
     	//System.out.println(e.getSource());
-	//System.out.println(e.getActionCommand());
-        //System.out.println("I got clicked");
-        String user = txtInput.getText();
-        lblOutput.setText("Hi there, " + user + "!");
+    	//System.out.println(e.getActionCommand());
+      //System.out.println("I got clicked");
+      String user = txtInput.getText();
+      lblOutput.setText("Hi there, " + user + "!");
     } // end actionPerformed
 }

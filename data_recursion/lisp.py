@@ -61,7 +61,7 @@ def main():
     for inString in inFile:
         inString = inString.strip()        
         inCode = strToTuple(inString)
-        print solve(inCode)
+        print(solve(inCode))
         
     inFile.close()
     

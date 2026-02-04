@@ -34,10 +34,10 @@ public class HiUserEvent extends JFrame {
         super("Hi, user");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-	Font myFont = new Font("Serif",0, 40);
-	output.setFont(myFont);
-	clickMe.setFont(myFont);
-	input.setFont(myFont);
+  Font myFont = new Font("Serif",0, 40);
+  output.setFont(myFont);
+  clickMe.setFont(myFont);
+  input.setFont(myFont);
 
         Container surface = this.getContentPane();
         surface.setLayout(new GridLayout(3,1));
@@ -54,7 +54,7 @@ public class HiUserEvent extends JFrame {
 class EventHandler implements ActionListener{
     public void actionPerformed(ActionEvent e){
         System.out.println("I got clicked");
-        //System.out.println(input.getText());
+        System.out.println(input.getText());
     }
 }
 
