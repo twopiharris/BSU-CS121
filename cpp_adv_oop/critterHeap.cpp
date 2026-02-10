@@ -1,6 +1,5 @@
 //Critter with constructor and destructor
 #include <iostream>
-#include <cstring>
 
 class Critter {
   private:
@@ -69,6 +68,7 @@ int main(){
   // delete the heap data
   delete(c);
 
+  /*
   // pointer will be destroyed when function goes
   // out of scope
   // critter array is built on heap
@@ -82,6 +82,7 @@ int main(){
   // than for a single element 
   // (because the array is a pointer to an array of pointers)
   delete[] cA;
-
+  */
+  
 }
 

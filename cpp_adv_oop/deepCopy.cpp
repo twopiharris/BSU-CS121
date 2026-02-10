@@ -5,19 +5,19 @@
 #include <iostream>
 
 
-class A{ // standard class w/out copy constructor
+class Critter{ // standard class w/out copy constructor
   private:
     //name is dynamic length, so it must be created on heap
     std::string* name;
   public:
-    A(){
+    Critter(){
       //since name is defined on heap, size can be determined
       //at run-time
       name = new std::string();
       *name = "Fred";
     } // end constructor
 
-    A(const A &original){
+    Critter(const Critter &original){
       //explicit copy constructor
       //pass a reference to the original variable
 
@@ -31,13 +31,13 @@ class A{ // standard class w/out copy constructor
 
     } // end copy constructor
 
-    ~A(){
+    ~Critter(){
       //we now have a heap variable, so we must explicitly delete it
       delete name;
     } // end destructor
 
     void setName(std::string name){
-      *A::name = name;
+      *Critter::name = name;
     } // end setName
 
     void greet(){
@@ -48,7 +48,7 @@ class A{ // standard class w/out copy constructor
 
 int main(){
   //instantiate A
-  A a;
+  Critter a;
   std::cout << "A's name should be Fred" << std::endl;
   a.greet();
 
@@ -57,9 +57,9 @@ int main(){
   //reference to the original class, and it explicitly copies all data
   //members from the original. This is called a 'deep copy,' and it's used
   //whenever the class uses pointers or heap-based data members.
-  A anotherA = a;
-  std::cout << "AnotherA is a copy of A so it should also have the name Fred" << std::endl;
-  anotherA.greet();
+  Critter b = a;
+  std::cout << "b is a copy of a so it should also have the name Fred" << std::endl;
+  b.greet();
 
   //now because the actual data values have new memory on the heap,
   //each instance of the class has its own heap space for member data
@@ -69,8 +69,8 @@ int main(){
   a.greet();
 
   //...doesn't modify the value of anotherA
-  std::cout << "... but anotherA should still be Fred." << std::endl;
-  anotherA.greet();
+  std::cout << "... but b should still be Fred." << std::endl;
+  b.greet();
 
   return 0;
 } // end main
