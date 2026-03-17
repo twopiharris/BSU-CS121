@@ -7,7 +7,7 @@ Critter::Critter(){
   Critter::age = 0;
 } 
 
-void Critter::populate(std::string name, int age){
+void Critter::init(std::string name, int age){
   Critter::name = name;
   Critter::age = age;
 } 

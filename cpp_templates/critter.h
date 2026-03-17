@@ -9,7 +9,7 @@ class Critter {
     int age;
   public:
     Critter();
-    void populate(std::string name, int age);
+    void init(std::string name, int age);
     std::string getName();
     void setName(std::string name);
     int getAge();

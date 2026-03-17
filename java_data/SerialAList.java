@@ -51,7 +51,7 @@ public class SerialAList {
       fIn.close();
     }catch (Exception e){
       System.out.println(e.getMessage());
-   } // end try
+    } // end try
   } // end loadCritter
 
   public void showCritters(){
@@ -67,9 +67,8 @@ public class SerialAList {
 class Critter implements Serializable{
   String name;
   int age;
-  int IQ = 75;
   
-  final static long serialVersionUID = 2L;
+  final static long serialVersionUID = 1L;
 
   public Critter(String lName, int lAge){
     name = lName;

@@ -10,9 +10,9 @@ bool sortByAge(Critter& a, Critter& b);
 const int NUM_CRITTERS = 3;
 int main(){
   Critter* c = new Critter[NUM_CRITTERS];
-  c[0].populate("Baker", 1);
-  c[1].populate("Alpha", 3);
-  c[2].populate("Charlie", 2);
+  c[0].init("Baker", 1);
+  c[1].init("Alpha", 3);
+  c[2].init("Charlie", 2);
 
   printArray(c, NUM_CRITTERS);
 
