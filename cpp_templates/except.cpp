@@ -18,10 +18,10 @@ void zero_check(int i){
    if (i == 0)
     throw zero(); //Argument is of zero class type.
 }
-main(){
+int main(){
    //try block
    try{
-     //note no
+     //note i can get to zero
      for (int i = 2; ; i--){
         zero_check(i);
         std::cout << "Reciprocal: " << 1.0/i << std::endl;

@@ -12,6 +12,9 @@ int main(){
 } // end main
 
 int getInt(){
+  // many modern parts of C++ throw pre-defined exceptions 
+  //std::stoi("foo");
+
   bool keepGoing = true;
   std::string item;
   int x;
