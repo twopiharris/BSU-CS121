@@ -1,0 +1,5 @@
+access the i/o system
+
+create integer main function
+  print hello world
+  return 0 error code

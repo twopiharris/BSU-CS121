@@ -1,9 +1,9 @@
-// hi.c 
-// demonstrate basic function of c code
-
 #include <stdio.h>
 
 int main(){
-  printf("Hello World!  \n");
-  return(0);
+  printf("Hello, world! ");
+
+  printf("from C");
+  return 0;
 } // end main
+

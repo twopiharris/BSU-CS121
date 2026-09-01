@@ -15,8 +15,8 @@ int main(){
   printf("myLong: %ld \n", myLong);
   printf("myFloat: %f \n", myFloat);
   printf("myDouble: %lf \n", myDouble);
-  printf("myChar: %d \n", myChar);
-  printf("myOtherChar: %c \n", myOtherChar);
+  printf("myChar: %b \n", myChar);
+  printf("myOtherChar: %b \n", myOtherChar);
   printf("\n");
   
   // casting and changing data representations
@@ -37,7 +37,7 @@ int main(){
   //printf("int + float: %d \n", myInteger + myFloat);
   printf("int + float: %f \n", myInteger + myFloat);
   printf("\n");
-
+  
   //arrays are sequential assignments
   int myIntArray[10];
   printf("size of array of 10 ints: %d bytes \n", (int)sizeof(myIntArray));
@@ -51,6 +51,7 @@ int main(){
   printf("text: |%s| \n", text);
 
   printf("size of text: %d bytes \n", (int)sizeof(text));
+
   return 0;
 }
 
