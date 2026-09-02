@@ -1,4 +1,4 @@
-/* main idea
+:/* main idea
    import standard input, string library
 
    create string called correct store actual password in it

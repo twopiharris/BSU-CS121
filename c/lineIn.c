@@ -18,12 +18,17 @@ int main(){
   printf("%s \n", data);
   
   // sscanf scans a string as if it was input from the console
-  sscanf(data, "%s %s %d", first, last, &age);
-
-  printf("first: %s \n", first);
-  printf("last: %s \n", last);
-  printf("age: %d \n", age);
-
+  // result will contain the number of successful reads
+  int result = sscanf(data, "%s %s %d", first, last, &age);
+  
+  if (result == 3){
+    printf("first: %s \n", first);
+    printf("last: %s \n", last);
+    printf("age: %d \n", age);
+  } else {
+    //there was an error
+    printf("Something didn't work");
+  } // end if
   return(0);
 }
 
