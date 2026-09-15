@@ -16,7 +16,6 @@ int main(){
     printf ("fName[3]: %c \n", *(fName + 3));
     printf ("NOT fName[3]: %c \n", *fName + 3);
 
-    /*
     //you can assign an entire string to a character pointer
     char * lName = "Harris";
     printf("Hi, %s %s! \n", fName, lName);
@@ -29,7 +28,6 @@ int main(){
     printf("Seriously, what's your name? ");
     scanf("%s", realName);
     printf("Hi, %s! \n", realName);
-
 
     //string length is fixed
     //'dynamic' strings are fixed by initial assignment
@@ -50,7 +48,6 @@ int main(){
     //fName = lName;
 
     //printf("%s %s", fName, lName);
-
 
     //that copies the value of one pointer to another!
     //comparing strings also doesn't work as expected!
@@ -79,12 +76,10 @@ int main(){
     strcpy(realName, "Andy Harris");
     //next line does not print 20 characters
     printf ("X%sX \n", realName);
-
     //you can embed a null directly
     realName[4] = '\0';
     printf ("%s \n", realName);
 
     //rest of string is in memory but not displayed
     printf ("%c \n", realName[5]);
-    */
 } // end main

@@ -19,7 +19,6 @@ struct date{
 int main(){
     date today;
     today.day = 2;
-
     today.month = "Sep";
     today.year = 2010;
 

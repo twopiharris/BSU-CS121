@@ -3,11 +3,14 @@
 #include <time.h>
 
 int main(){
+  int die;
   srand(time(NULL));
   for (int i = 0; i < 10; i++){
-    int a = rand();
-    a = (a % 6) + 1;
-    printf("%d ", a);
+    die = (rand() % 6) + 1;
+    //die = rand();
+    //die = die % 6;
+    //die = die + 1;
+    printf("%d ", die);
   } // end for
   printf("\n");
 

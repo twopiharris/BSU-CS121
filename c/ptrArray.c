@@ -27,6 +27,7 @@ int main(){
     printf("%d (%d): %d \n", i, par[i], score[i]);
   } // end for
 
+
   //array is actually a pointer to element zero!
   printf("score for 0: %d\n", *score);
   // this line actually shows the address of that element
@@ -41,7 +42,7 @@ int main(){
   //What if you try to print something that
   //isn't really part of the array?
   printf("Garbage: %d \n", *(score + 5));
-  
+
   return(0);
 } // end main
 

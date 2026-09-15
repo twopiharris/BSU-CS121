@@ -23,8 +23,9 @@ int main(){
     printf("value AT ppA: %p \n", *ppA);
     printf("value AT value AT ppA: %d \n", **ppA);
     return 0;
+/*
 
-
+*/
 
 
 } // end main
