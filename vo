@@ -59,3 +59,6 @@ map <F6> :make run<CR>
 "quick debugging
 :command Db !gdb a.out
 :command Vg !valgrind --leak-check=full ./a.out
+
+" Use Ctrl+A instead of Ctrl+W for window navigation
+nnoremap <C-a> <C-w>
