@@ -8,18 +8,21 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+"Use tabs in makefile
+autocmd FileType make setlocal noexpandtab
+
 "Add line numbers and autoindent
 set number
 set autoindent
-
-"Use tabs in makefile
-autocmd FileType make setlocal noexpandtab
 
 "set initial color scheme for a dark background
 set background=dark
 
 "turn off the annoying bell
 set vb t_vb=
+
+" turn on wildmenu for autocomplete
+set wildmenu
 
 "map background swapping to function keys
 map <F2> :set background=light<CR>

@@ -37,6 +37,9 @@ int main(){
   //The default copy mechanism is a shallow copy.
   //It copies all stack member variables, but does not
   //guarantee copies of heap variables.
+  int x = 5;
+  int y = x;
+
   Critter b = a;
   b.greet();
 

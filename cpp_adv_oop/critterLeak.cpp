@@ -28,7 +28,7 @@ Critter::Critter(std::string name){
 Critter::~Critter(){
   std::cout << "I confess I breathe my last..." << std::endl;
   // OOPS! I FORGOT TO DELETE THE NAME!
-  //delete name;
+  delete name;
 }
 
 void Critter::setName(std::string name){

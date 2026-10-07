@@ -16,7 +16,7 @@ int main(){
   *heapInt = 5;
 
   std::string* heapString = new std::string("I'm on the heap");
-
+  
   // you can also create an array on the heap
   int* heapArray = new int[5];
 

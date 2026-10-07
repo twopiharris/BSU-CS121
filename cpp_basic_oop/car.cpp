@@ -4,6 +4,7 @@
 #include "critter.h"
 #include "car.h"
 
+
 Car::Car(){
   //add a default critter
   Car::driver = Critter();

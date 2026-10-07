@@ -38,6 +38,7 @@ int main(){
   inFile.close();
   std::cout << std::endl;
 
+ 
  // using keepGoing loop
  // maybe cleanest way, but a bit verbose
  inFile.open("example.dat");
@@ -65,7 +66,6 @@ int main(){
     std::cout << "Now we need " << item << std::endl;
   } // end while
   inFile.close();
-
+  
   return 0;
-
 } // end main

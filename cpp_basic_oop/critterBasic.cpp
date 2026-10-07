@@ -7,7 +7,7 @@ class Critter {
     int age;
   public:
     Critter();
-    Critter(std::string name, int age);
+    void init(std::string name, int age);
     void setName(std::string name);
     std::string getName();
     void setAge(int age);
@@ -21,12 +21,12 @@ int main(){
   theCritter.setName("Percival");
   theCritter.setAge(10);
   theCritter.sayHi();
-  Critter anotherCritter("Martha", 5);
+  Critter anotherCritter;
+  anotherCritter.init("Martha", 5);
   anotherCritter.sayHi();
 
   return 0;
 }
-
 
 // Critter method definitions
 Critter::Critter(){
@@ -34,7 +34,7 @@ Critter::Critter(){
   setAge(0);
 } // end const
 
-Critter::Critter(std::string name, int age){
+void Critter::init(std::string name, int age){
   setName(name);
   setAge(age);
 } // end const
