@@ -1,4 +1,8 @@
 "Andy's .vimrc
+"UPDATED FOR GIT CODESPACES
+" remap ^W to ^A
+" add wildmenu support
+
 "No plugins, just a few settings I use for rapid demonstrations
 "If you want to use this, just copy to a file called .vimrc
 "in your root directory
