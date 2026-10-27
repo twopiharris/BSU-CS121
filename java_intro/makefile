@@ -1,12 +1,17 @@
-Crypto.class: Crypto.java
-	javac -g Crypto.java
+Race.class: Race.java Horse.class
+	javac -g Race.java
 
-run: Crypto.class
-	java Crypto
+Horse.class: Horse.java
+	javac -g Horse.java
 
-clean:
+clean: 
 	rm *.class
 
-debug:
-	jdb Crypto
+testHorse: Horse.class
+	java Horse
 
+run: Race.class
+	java Race
+
+debug: Race.class
+	jdb Race
