@@ -64,8 +64,6 @@ void invert(){
   std::cout << "===== A =====" << std::endl << a->print() << std::endl;
   std::cout << "===== B =====" << std::endl << b->print() << std::endl;
 
-  //a = a->invert();
-  
   Node tNode;
   Node* tempNode = &tNode;
 

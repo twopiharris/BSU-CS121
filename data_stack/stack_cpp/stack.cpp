@@ -13,8 +13,8 @@ Stack::~Stack(){
   
   //Stack::clear();
   Node* currentNode = Stack::head;
-  //don't delete an empty stack!
   bool keepGoing = true;
+
   while (keepGoing){
     if (this->isEmpty()){
       keepGoing = false;
@@ -24,23 +24,6 @@ Stack::~Stack(){
     } // end if
   } // end while
 
-/*
-  if (currentNode != NULL){
-    Node* nextNode;
-    bool keepGoing = true;
-    while (keepGoing){
-      nextNode = currentNode->getNextNode();
-      std::cout << "deleting " << currentNode->getPayload() << std::endl;
-     delete(currentNode);
-     if (nextNode== NULL){
-        keepGoing = false;
-      } else {
-        //delete(currentNode);
-        currentNode = nextNode;
-       } // end if
-    } // end keepGoing
-  } // end 'null destructor check
-  */
 } // end destructor 
 
 void Stack::push(Node* newNode){
@@ -86,29 +69,4 @@ void Stack::clear(){
     Stack::clear();
   } // end if
 } // end clear
-
-Stack* Stack::invert(){
-  /*
-  //inverts this stack
-  // build a temp stack
-  Stack temp = new Stack();
-  while (!Stack::isEmpty()){
-    temp.push(Stack::pop());
-    std::cout << "main" << std::endl << Stack::print() << std::endl;
-    std::cout << "temp" << std::endl << temp.print() << std::endl;
-  } // end while
-  //Stack::head = temp->head;
-  std::cout << "after temp" << std::endl << temp.print() << std::endl;
-  std::cout << "after main" << std::endl << Stack::print() << std::endl;
-
-  Node* tNode;
-  while (!temp->isEmpty()){
-    tNode = temp->pop();
-    delete(tNode);
-  } // end while
-*/
-  //return(&temp);
-  return NULL;
-  //delete(temp);       
-} // end invert
 

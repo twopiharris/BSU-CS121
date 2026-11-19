@@ -15,7 +15,6 @@ class Stack{
     std::string print();
     bool isEmpty();
     void clear();
-    Stack* invert();
 };
 
 #endif
