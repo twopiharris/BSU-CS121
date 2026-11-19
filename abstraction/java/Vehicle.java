@@ -7,7 +7,7 @@ public abstract class Vehicle {
 
   public static void main(String[] args){
     System.out.println("Hi");
-  } // 
+} // 
 
   public abstract void steerLeft();
   public abstract void steerRight();

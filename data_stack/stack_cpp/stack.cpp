@@ -14,6 +14,17 @@ Stack::~Stack(){
   //Stack::clear();
   Node* currentNode = Stack::head;
   //don't delete an empty stack!
+  bool keepGoing = true;
+  while (keepGoing){
+    if (this->isEmpty()){
+      keepGoing = false;
+    } else {
+      currentNode = this->pop();
+      delete(currentNode);
+    } // end if
+  } // end while
+
+/*
   if (currentNode != NULL){
     Node* nextNode;
     bool keepGoing = true;
@@ -29,6 +40,7 @@ Stack::~Stack(){
        } // end if
     } // end keepGoing
   } // end 'null destructor check
+  */
 } // end destructor 
 
 void Stack::push(Node* newNode){
@@ -76,9 +88,10 @@ void Stack::clear(){
 } // end clear
 
 Stack* Stack::invert(){
+  /*
   //inverts this stack
   // build a temp stack
-  Stack temp = Stack();
+  Stack temp = new Stack();
   while (!Stack::isEmpty()){
     temp.push(Stack::pop());
     std::cout << "main" << std::endl << Stack::print() << std::endl;
@@ -88,13 +101,14 @@ Stack* Stack::invert(){
   std::cout << "after temp" << std::endl << temp.print() << std::endl;
   std::cout << "after main" << std::endl << Stack::print() << std::endl;
 
-/*  Node* tNode;
+  Node* tNode;
   while (!temp->isEmpty()){
     tNode = temp->pop();
     delete(tNode);
   } // end while
 */
-  return(&temp);
+  //return(&temp);
+  return NULL;
   //delete(temp);       
 } // end invert
 
