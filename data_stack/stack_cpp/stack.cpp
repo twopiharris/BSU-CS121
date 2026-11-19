@@ -39,7 +39,7 @@ Node* Stack::pop(){
 
 std::string Stack::print(){
   // iterate through the stack printing out each node on 
-  // a seperate line as a debugging tool
+  // a separate line as a debugging tool
   std::string output = "";
   if (Stack::head != NULL){ 
     Node* currentNode = Stack::head;
